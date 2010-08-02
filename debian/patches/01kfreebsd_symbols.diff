@@ -1,0 +1,31 @@
+## 01kfreebsd_symbols.diff by Petr Salinger <Petr.Salinger@seznam.cz>
+##
+## DP: Use Symbols.linux linker script for kfreebsd.
+## DP: See Debian bug #561086.
+
+Index: libsndfile-1.0.21/configure.ac
+===================================================================
+--- libsndfile-1.0.21.orig/configure.ac
++++ libsndfile-1.0.21/configure.ac
+@@ -521,7 +521,7 @@
+ 			CFLAGS=$temp_CFLAGS
+ 			SHLIB_VERSION_ARG="-Wl,-exported_symbols_list -Wl,\$(srcdir)/Symbols.darwin"
+ 			;;
+-		linux*)
++		linux*|kfreebsd*-gnu*|gnu*)
+ 			SHLIB_VERSION_ARG="-Wl,--version-script=\$(srcdir)/Symbols.linux"
+ 			;;
+ 		mingw*)
+Index: libsndfile-1.0.21/Makefile.am
+===================================================================
+--- libsndfile-1.0.21.orig/Makefile.am
++++ libsndfile-1.0.21/Makefile.am
+@@ -2,6 +2,8 @@
+ 
+ DISTCHECK_CONFIGURE_FLAGS = --enable-gcc-werror
+ 
++ACLOCAL_AMFLAGS = -I M4
++
+ if BUILD_OCTAVE_MOD
+ octave_dir = Octave
+ endif
