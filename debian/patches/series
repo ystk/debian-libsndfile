@@ -1,3 +1,4 @@
 00lossy_comp_test-overflow.diff
 01kfreebsd_symbols.diff
 02flac_zero_len.diff
+03CVE-2011-2696.diff

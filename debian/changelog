@@ -1,3 +1,9 @@
+libsndfile (1.0.21-3+squeeze1) stable-security; urgency=low
+
+  * CVE-2011-2696
+
+ -- Moritz Muehlenhoff <jmm@debian.org>  Mon, 25 Jul 2011 16:19:09 +0000
+
 libsndfile (1.0.21-3) unstable; urgency=low
 
   * Add patch 02flac_zero_len.diff to make FLAC handler work on files of
