@@ -1,3 +1,59 @@
+libsndfile (1.0.25-5) unstable; urgency=low
+
+  * debian/libsndfile1-dev: Do not install libsndfile.la (Closes: #670420).
+  * debian/control: Standards version 3.9.3. No changes needed.
+
+ -- Erik de Castro Lopo <erikd@mega-nerd.com>  Mon, 18 Jun 2012 19:22:57 +1000
+
+libsndfile (1.0.25-4) unstable; urgency=low
+
+  * Patch from Moritz Muehlenhoff enabling harden build flags (Closes: #654831).
+
+ -- Erik de Castro Lopo <erikd@mega-nerd.com>  Fri,  6 Jan 2012 21:19:17 +1100
+
+libsndfile (1.0.25-3) unstable; urgency=low
+
+  * Patch from Steve Langasek to enable multiarch (Closes: #637585).
+
+ -- Erik de Castro Lopo <erikd@mega-nerd.com>  Sat, 13 Aug 2011 09:01:35 +1000
+
+libsndfile (1.0.25-2) unstable; urgency=low
+
+  * debian/control: Use linux-any dpkg architecture wildcard (Closes: #634492).
+
+ -- Erik de Castro Lopo <erikd@mega-nerd.com>  Tue, 19 Jul 2011 18:40:14 +1000
+
+libsndfile (1.0.25-1) unstable; urgency=low
+
+  * New upstream.
+  * debian/control: Update standards version (no changes needed).
+  * debian/rules: Add build-indep and build-arch targets.
+
+ -- Erik de Castro Lopo <erikd@mega-nerd.com>  Mon, 18 Jul 2011 20:06:57 +1000
+
+libsndfile (1.0.24-1) unstable; urgency=low
+
+  * New upstream.
+
+ -- Erik de Castro Lopo <erikd@mega-nerd.com>  Wed, 23 Mar 2011 20:50:15 +1100
+
+libsndfile (1.0.23-1) unstable; urgency=low
+
+  * New upstream (Closes: #599145, #545257).
+
+ -- Erik de Castro Lopo <erikd@mega-nerd.com>  Sun, 10 Oct 2010 18:31:15 +1100
+
+libsndfile (1.0.22-1) unstable; urgency=low
+
+  * New upstream.
+  * Remove debian/patches/01kfreebsd_symbols.diff (already in upstream).
+  * Remove debian/patches/02flac_zero_len.diff (already in upstream).
+  * debian/control :
+     - Remove build-dep on autoconf and automake.
+     - Standard version 3.9.1.
+
+ -- Erik de Castro Lopo <erikd@mega-nerd.com>  Mon,  4 Oct 2010 12:28:26 +1100
+
 libsndfile (1.0.21-3) unstable; urgency=low
 
   * Add patch 02flac_zero_len.diff to make FLAC handler work on files of
