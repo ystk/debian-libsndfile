@@ -1,3 +1,37 @@
+libsndfile (1.0.25-9) unstable; urgency=low
+
+  * debian/rules: Switch from autotools-dev to dh-autoreconf.
+  * debian/control Standards-Version 3.9.5.
+
+ -- Erik de Castro Lopo <erikd@mega-nerd.com>  Wed, 29 Jan 2014 18:21:13 +1100
+
+libsndfile (1.0.25-8) unstable; urgency=low
+
+  [Wookey <wookey@debian.org>]
+  * Ensure config.sub/guess are up to date (Closes: #732346).
+
+  [Erik de Castro Lopo]
+  * debian/control:
+    - Standards version 3.9.4. No changes needed.
+    - Set 'Multi-Arch: same' for -dbg package.
+
+ -- Erik de Castro Lopo <erikd@mega-nerd.com>  Tue, 17 Dec 2013 21:18:40 +1100
+
+libsndfile (1.0.25-7) unstable; urgency=low
+
+  * debian/control debian/rules
+    Create -dbg versions of libsndfile1 and sndfile-programs binary packages.
+
+ -- Erik de Castro Lopo <erikd@mega-nerd.com>  Sat, 13 Jul 2013 18:48:35 +1000
+
+libsndfile (1.0.25-6) unstable; urgency=low
+
+  * debian/patches/01_sd2_rsrc_segfault.diff : Patch from upstream git.
+  * debian/rules : Remove cruft at end of ifeq line.
+  * debian/control : Remove DM-Upload-Allowed which no longer works.
+
+ -- Erik de Castro Lopo <erikd@mega-nerd.com>  Fri, 28 Jun 2013 17:39:23 +1000
+
 libsndfile (1.0.25-5) unstable; urgency=low
 
   * debian/libsndfile1-dev: Do not install libsndfile.la (Closes: #670420).

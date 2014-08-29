@@ -2,11 +2,10 @@ Source: libsndfile
 Section: devel
 Priority: optional
 Maintainer: Erik de Castro Lopo <erikd@mega-nerd.com>
-DM-Upload-Allowed: yes
-Build-Depends: debhelper (>= 8.1.3), pkg-config,
+Build-Depends: debhelper (>= 8.1.3), pkg-config, dh-autoreconf,
  libvorbis-dev (>= 1.2.3), libflac-dev (>= 1.1.4-3),
  libasound2-dev [linux-any]
-Standards-Version: 3.9.3
+Standards-Version: 3.9.5
 Homepage: http://www.mega-nerd.com/libsndfile/
 
 Package: libsndfile1-dev
@@ -56,3 +55,30 @@ Description: Sample programs that use libsndfile
    - sndfile-info : print information about files
    - sndfile-metadata-get/set : get and set file metadata
    - sndfile-play : play a sound file
+
+Package: libsndfile1-dbg
+Architecture: any
+Section: debug
+Priority: extra
+Multi-Arch: same
+Depends:
+    libsndfile1 (= ${binary:Version}),
+    ${misc:Depends}
+Description: debugging symbols for libsndfile
+ libsndfile is a library of C routines for reading and writing files containing
+ sampled audio data.
+ .
+ This package contains the debugging symbols for libsndfile.
+
+Package: sndfile-programs-dbg
+Architecture: any
+Section: debug
+Priority: extra
+Depends:
+    sndfile-programs (= ${binary:Version}),
+    ${misc:Depends}
+Description: debugging symbols for sndfile-programs
+ This package contains simple programs which use libsndfile for operating on
+ sound files.
+ .
+ This package contains the debugging symbols for sndfile-programs.
