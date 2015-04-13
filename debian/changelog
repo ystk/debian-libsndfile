@@ -1,3 +1,10 @@
+libsndfile (1.0.25-9.1) unstable; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * Fix CVE-2014-9496: buffer overread issues (closes: #774162).
+
+ -- Michael Gilbert <mgilbert@debian.org>  Mon, 26 Jan 2015 01:32:01 +0000
+
 libsndfile (1.0.25-9) unstable; urgency=low
 
   * debian/rules: Switch from autotools-dev to dh-autoreconf.
