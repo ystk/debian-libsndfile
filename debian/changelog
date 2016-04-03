@@ -1,3 +1,12 @@
+libsndfile (1.0.25-9.1+deb8u1) jessie; urgency=medium
+
+  * Fix denial of service through division by zero (CVE-2014-9756)
+    -> 03_file_io_divide_by_zero.diff (Closes: #804447)
+  * Fix heap overflow in AIFF parser (CVE-2015-7805)
+    -> 04_fix_aiff_heap_overflow.diff (Closes: #804445)
+
+ -- Moritz Mühlenhoff <jmm@debian.org>  Wed, 23 Mar 2016 00:34:11 +0100
+
 libsndfile (1.0.25-9.1) unstable; urgency=high
 
   * Non-maintainer upload by the Security Team.
