@@ -1,0 +1,22 @@
+commit 725c7dbb95bfaf8b4bb7b04820e3a00cceea9ce6
+Author: Erik de Castro Lopo <erikd@mega-nerd.com>
+Date:   Wed Dec 24 21:02:35 2014 +1100
+
+    src/file_io.c : Prevent potential divide-by-zero.
+    
+    Closes: https://github.com/erikd/libsndfile/issues/92
+
+Index: libsndfile-1.0.21/src/file_io.c
+===================================================================
+--- libsndfile-1.0.21.orig/src/file_io.c	2015-11-30 11:27:44.000000000 +0100
++++ libsndfile-1.0.21/src/file_io.c	2015-11-30 11:27:44.000000000 +0100
+@@ -360,6 +360,9 @@
+ {	sf_count_t total = 0 ;
+ 	ssize_t	count ;
+ 
++	if (bytes == 0 || items == 0)
++		return 0 ;
++
+ 	if (psf->virtual_io)
+ 		return psf->vio.write (ptr, bytes*items, psf->vio_user_data) / bytes ;
+ 

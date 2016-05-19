@@ -1,3 +1,13 @@
+libsndfile (1.0.21-3+squeeze2) squeeze-lts; urgency=high
+
+  * Non-maintainer upload by the Squeeze LTS Team. 
+  * debian/patches :
+    - Add 102_sd2_buffer_read_overflow.diff (CVE-2014-9496, closes: #774162).
+    - Add 103_file_io_divide_by_zero.diff (CVE-2014-9756, closes: #804447).
+    - Add 104_fix_aiff_heap_overflow.diff (CVE-2015-7805, closes: #804445).
+ 
+ -- Thorsten Alteholz <debian@alteholz.de>  Mon, 30 Sep 2015 11:03:02 +0100
+
 libsndfile (1.0.21-3+squeeze1) stable-security; urgency=low
 
   * CVE-2011-2696

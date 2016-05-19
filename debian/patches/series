@@ -2,3 +2,7 @@
 01kfreebsd_symbols.diff
 02flac_zero_len.diff
 03CVE-2011-2696.diff
+103_file_io_divide_by_zero.diff
+104_fix_aiff_heap_overflow.diff
+102_sd2_buffer_read_overflow.diff
+
