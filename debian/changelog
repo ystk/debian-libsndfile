@@ -1,3 +1,22 @@
+libsndfile (1.0.25-9.1+deb8u2) jessie-security; urgency=high
+
+  * Non-maintainer upload by the LTS Team.
+  * CVE-2018-13139, CVE-2018-19432: out of bounds read in sf_write_int
+    (closes: #914381).
+  * CVE-2017-8365: global buffer overflow in i2les_array (closes: #862202).
+  * CVE-2017-8363: heap-based buffer overflow in flac_buffer_copy
+    (closes: #862203).
+  * CVE-2017-8362: Invalid memory read in flac_buffer_copy (closes: #862204).
+  * CVE-2017-8361: global buffer overflow in flac_buffer_copy
+    (closes: #862205).
+  * CVE-2017-14634: multiple divide-by-zero issues in double64_init and
+    float32_init (closes: #876783).
+  * CVE-2017-17456, CVE-2017-17457, CVE-2018-19662, CVE-2018-19661,
+    CVE-2017-14245 and CVE-2017-14246: multiple buffer overflow issues in
+    {d,i}2ulaw_array and {d,i}2alaw_array (closes: #884735).
+
+ -- Hugo Lefeuvre <hle@debian.org>  Sat, 15 Dec 2018 13:10:27 +0100
+
 libsndfile (1.0.25-9.1+deb8u1) jessie; urgency=medium
 
   * Fix denial of service through division by zero (CVE-2014-9756)

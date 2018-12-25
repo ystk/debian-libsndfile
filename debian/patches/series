@@ -3,3 +3,8 @@
 CVE-2014-9496.patch
 03_file_io_divide_by_zero.diff
 04_fix_aiff_heap_overflow.diff
+CVE-2018-13139.patch
+CVE-2017-8363.patch
+CVE-2017-8362.patch
+CVE-2017-14634.patch
+CVE-2018-19661.patch
