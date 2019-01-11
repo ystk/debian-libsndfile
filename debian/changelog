@@ -1,3 +1,10 @@
+libsndfile (1.0.25-9.1+deb8u3) jessie-security; urgency=high
+
+  * Non-maintainer upload by the LTS Team.
+  * CVE-2018-19758: heap-buffer-overflow in wav_write_header (closes: #917416).
+
+ -- Hugo Lefeuvre <hle@debian.org>  Thu, 10 Jan 2019 15:02:51 +0100
+
 libsndfile (1.0.25-9.1+deb8u2) jessie-security; urgency=high
 
   * Non-maintainer upload by the LTS Team.
