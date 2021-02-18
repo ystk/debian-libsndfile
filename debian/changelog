@@ -1,3 +1,36 @@
+libsndfile (1.0.25-9.1+deb8u5) jessie-security; urgency=medium
+
+  * Non-maintainer upload by the ELTS Team.
+  * CVE-2017-6892
+    An error in the "aiff_read_chanmap()" function could be exploited
+    to cause an out-of-bounds read memory access via a specially
+    crafted AIFF file.
+  * CVE-2017-7585
+    In libsndfile before 1.0.28, an error in the "flac_buffer_copy()"
+    function (flac.c) can be exploited to cause a stack-based buffer
+    overflow via a specially crafted FLAC file.
+  * CVE-2017-7586
+    In libsndfile before 1.0.28, an error in the "header_read()"
+    function (common.c) when handling ID3 tags can be exploited to
+    cause a stack-based buffer overflow via a specially crafted FLAC file.
+  * CVE-2017-7741
+    In libsndfile before 1.0.28, an error in the "flac_buffer_copy()"
+    function (flac.c) can be exploited to cause a segmentation violation
+    (with write memory access) via a specially crafted FLAC file during
+    a resample attempt, a similar issue to CVE-2017-7585.
+  * CVE-2017-7742
+    In libsndfile before 1.0.28, an error in the "flac_buffer_copy()"
+    function (flac.c) can be exploited to cause a segmentation violation
+    (with read memory access) via a specially crafted FLAC file during a
+    resample attempt, a similar issue to CVE-2017-7585.
+  * CVE-2017-12562
+    Fix heap buffer overflows when writing strings in psf_binheader_writef
+    to prevent remote attackers causing a remote denial of service.
+  * CVE-2017-16942
+    Fix divide by zero error in wav_w64_read_fmt_chunk()
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Tue, 27 Oct 2020 19:03:02 +0200
+
 libsndfile (1.0.25-9.1+deb8u4) jessie-security; urgency=medium
 
   * Non-maintainer upload by the LTS Team.
