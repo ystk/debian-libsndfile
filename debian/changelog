@@ -1,3 +1,12 @@
+libsndfile (1.0.25-9.1+deb8u6) jessie-security; urgency=medium
+
+  * Non-maintainer upload by the ELTS Team.
+  * CVE-2021-3246 (Closes: #991496)
+    A crafted WAV file can trigger a heap buffer overflow and might
+    allow exectution of arbitrary code.
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Thu, 29 Jul 2021 19:03:02 +0200
+
 libsndfile (1.0.25-9.1+deb8u5) jessie-security; urgency=medium
 
   * Non-maintainer upload by the ELTS Team.
