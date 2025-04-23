@@ -1,3 +1,17 @@
+libsndfile (1.0.25-9.1+deb8u8) jessie-security; urgency=high
+
+  * Non-maintainer upload by the ELTS team.
+  * Fix CVE-2022-33065: Multiple signed integers overflow in function
+    au_read_header in src/au.c and in functions mat4_open and mat4_read_header
+    in src/mat4.c in Libsndfile, allows an attacker to cause Denial of Service
+    or other unspecified impacts.
+  * Fix CVE-2024-50612: libsndfile through 1.2.2 has an ogg_vorbis.c
+    vorbis_analysis_wrote out-of-bounds read.
+  * Import autopkgtests from unstable version 1.2.2-2
+  * Adopt autopkgtest to old package
+
+ -- Jochen Sprickerhof <jspricke@debian.org>  Tue, 22 Apr 2025 14:55:44 +0200
+
 libsndfile (1.0.25-9.1+deb8u7) jessie-security; urgency=medium
 
   * Non-maintainer upload by the ELTS Team.

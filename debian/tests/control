@@ -1,0 +1,19 @@
+Tests:
+ libsndfile1-dev,
+Restrictions:
+ allow-stderr,
+ superficial,
+Depends:
+ build-essential,
+ libsndfile1-dev,
+ pkgconf,
+
+Tests:
+ upstream-testsuite,
+Restrictions:
+ allow-stderr,
+Depends:
+ build-essential,
+ pkgconf,
+ python3,
+ @,

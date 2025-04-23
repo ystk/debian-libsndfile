@@ -1,0 +1,36 @@
+#!/bin/sh
+
+set -eux
+
+DEB_HOST_MULTIARCH=$(dpkg-architecture -qDEB_HOST_MULTIARCH)
+
+echo "running test $0 for ${DEB_HOST_MULTIARCH}"
+
+build_make_sine() {
+if [ -n "${DEB_HOST_GNU_TYPE:-}" ]; then
+    CROSS_COMPILE="$DEB_HOST_GNU_TYPE-"
+else
+    CROSS_COMPILE=
+fi
+
+# Deliberately word-splitting pkgconf's output:
+# shellcheck disable=SC2046
+"${CROSS_COMPILE}gcc" -oexamples/make_sine examples/make_sine.c -lm $("${CROSS_COMPILE}pkgconf" --cflags --libs sndfile)
+}
+
+./configure
+make check
+
+#sed -e 's|^PYTHON=.*|PYTHON=skiptest\nskiptest() { echo "skipping $@"\n}|' -i tests/test_wrapper.sh
+
+# fix paths in metadata test
+sed -i \
+	-e 's|\./\(sndfile-metadata-.et\)|/usr/bin/\1|' \
+	programs/test-sndfile-metadata-set.py
+
+
+# prepare the make_sine executable for tests
+build_make_sine
+
+# now run the tests
+tests/test_wrapper.sh 2>&1

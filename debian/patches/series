@@ -20,3 +20,6 @@ CVE-2017-16942.patch
 CVE-2021-3246.patch
 
 CVE-2021-4156.patch
+0017-fix-integer-overflows-causing-CVE-2022-33065.patch
+0018-Add-ogg_write_page-prerequisite-for-CVE-2024-50612.patch
+0019-fix-crash-in-ogg-vorbis-RHEL-65093-CVE-2024-50612.patch
